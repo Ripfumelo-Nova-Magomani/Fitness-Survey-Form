@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+        <title>Survey Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <h1 id="title">FITNESS CENTER SURVEY</h1>
+            <p id="description" class="intro">Thank you so much for your interest in our fitness center!<br> Whether you're a member now or considering future membership, <br>we would really appreciate your feedback so we can continue to improve. <br><br>Thank you!</p>
+        </header>
+        <form id="survey-form">
+            <fieldset class="form-group">
+                <p>Please share your contact information below.</p>
+                    <label id="name-label" for="name"> First name:
+                        <input 
+                            id="name" 
+                            type="text" 
+                            class="form-inputs" 
+                            placeholder="Enter your first name" 
+                            required 
+                        />
+                    </label>
+                     <label id="name-label" for="name"> Last name:
+                        <input 
+                            id="name" 
+                            type="text" 
+                            class="form-inputs" 
+                            placeholder="Enter your last name" 
+                            required 
+                        />
+                    </label>
+                    <label for="telNo"> Telephone:
+                        <input 
+                            id="telNo" 
+                            type="tel=numbers" 
+                            name="telNo"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                            placeholder="Your phone number" 
+                            minlength="11" 
+                            maxlength="11" 
+                            class="form-inputs" 
+                            required 
+                        />
+                    </label>
+                    <label id="email-label" for="email"> Email:
+                        <input 
+                            id="email" 
+                            type="email" 
+                            pattern=".+@globex\.com" 
+                            class="form-inputs" 
+                            placeholder="Enter your email address" 
+                            required
+                        /> 
+                    </label>
+                
+            </fieldset>
+            <fieldset class="form-group">
+                <p> How do you prefer to be contacted? </p>
+                    <label>
+                        <input 
+                            name="contact" 
+                            id="e-mail" 
+                            type="radio" 
+                            value="email"
+                            class="inline" 
+                            required
+                        /> Email
+                    </label>
+                    <label>
+                        <input 
+                            name="contact" 
+                            id="call" 
+                            type="radio"
+                            value="call" 
+                            class="inline" 
+                            required
+                        /> Phone call
+                    </label>
+                    <label>
+                        <input 
+                            name="contact" 
+                            id="text" 
+                            type="radio" 
+                            value="text"
+                            class="inline" 
+                            required
+                        /> Text
+                    </label>
+               
+            </fieldset>
+            <fieldset class="form-group">
+                <p> To help us meeting the needs of our entire community, please identify your age range.</p>
+                    <select name="ageRange" id="dropdown">
+                        <option value="">--select range--</option>
+                        <option value="1"><18</option>
+                        <option value="2">18-25</option>
+                        <option value="3">26-34</option>
+                        <option value="4">35-45</option>
+                        <option value="5">46-55</option>
+                        <option value="6">56-65</option>
+                        <option value="7">65+</option>
+                      </select>
+                
+            </fieldset>
+            <fieldset class="form-group">
+                <p> Are you a current member? </p>
+                    <label>
+                        <input 
+                            type="radio" 
+                            value="yes"
+                            name="membership" 
+                            id="yes" 
+                            class="inline" 
+                            required
+                        /> Yes
+                    </label>
+                    <label>
+                        <input 
+                            type="radio"
+                            value="no" 
+                            name="membership" 
+                            id="no" 
+                            class="inline" 
+                            required 
+                        /> No
+                    </label>
+                
+            </fieldset>
+            <fieldset class="form-group">
+                <p>	How did you learn about us? </p>
+                    <label>
+                        <input 
+                            name="channel" 
+                            id="advert" 
+                            type="radio" 
+                            value="advert"
+                            class="inline" 
+                            required
+                        /> Advertisement
+                    </label>
+                    <label>
+                        <input 
+                            name="channel" 
+                            id="online" 
+                            type="radio" 
+                            value="online"
+                            class="inline"  
+                            required
+                        /> Research online
+                    </label>
+                    <label>
+                        <input 
+                            name="channel" 
+                            id="people" 
+                            type="radio" 
+                            value="family-friends"
+                            class="inline"  
+                            required
+                        /> Friend/family
+                    </label>
+                    <label>
+                        <input 
+                            name="channel" 
+                            id="proximity" 
+                            type="radio" 
+                            value="near-job-home"
+                            class="inline"  
+                            required
+                        /> Near my job/home
+                    </label>
+                    <label>
+                        <input 
+                            name="channel" 
+                            id="other" 
+                            type="radio" 
+                            value="other"
+                            class="inline" 
+                            required
+                        /> Other (Please specify)
+                        <textarea 
+                            id="textarea" 
+                            rows="5" 
+                            cols="60" 
+                            placeholder="Where did you hear from us?"
+                        ></textarea>
+                    </label>
+            </fieldset>
+            <fieldset class="form-group">
+                    <p> How far is our location from your home? </p>
+                        <label for="distance"> 
+                            <input 
+                                type="radio" 
+                                value="less-than-10-mins"
+                                name="distance" 
+                                id="1" 
+                                class="inline" 
+                                required
+                            /> Less than 10 minutes
+                        </label>
+                        <label for="distance"> 
+                            <input 
+                                type="radio" 
+                                value="10-30-mins"
+                                name="distance" 
+                                id="2" 
+                                class="inline" 
+                                required
+                            /> 10 - 30 minutes
+                        </label>
+                        <label for="distance"> 
+                            <input 
+                                type="radio" 
+                                value="31-60-mins"
+                                name="distance" 
+                                id="3" 
+                                class="inline" 
+                                required
+                            /> 31 - 60 minutes
+                        </label>
+                        <label for="distance"> 
+                            <input 
+                                type="radio" 
+                                value="more-than-1hr"
+                                name="distance" 
+                                id="4" 
+                                class="inline" 
+                                required
+                            /> More than 1 hour
+                        </label>
+                    
+            </fieldset>
+            <fieldset class="form-group">
+                <p> How often do you come to visit us? </p>
+                    <label for="frequency">
+                        <input 
+                            type="radio" 
+                            value="once-monthly-or-less"
+                            name="frequency" 
+                            id="1" 
+                            class="inline" 
+                            required
+                            /> Once monthly or less
+                    </label>
+                    <label for="frequency">
+                        <input 
+                            type="radio" 
+                            value="once-every-2wks"
+                            name="frequency" 
+                            id="2" 
+                            class="inline" 
+                            required
+                        /> Once every 2 weeks
+                    </label>
+                    <label for="frequency">
+                        <input 
+                            type="radio" 
+                            value="once-perwk"
+                            name="frequency" 
+                            id="3" 
+                            class="inline" 
+                            required
+                        /> Once a week
+                    </label>
+                    <label for="frequency">
+                        <input 
+                            type="radio" 
+                            value="2-3-times-perwk"
+                            name="frequency" 
+                            id="4" 
+                            class="inline" 
+                            required
+                        /> 2-3 times a week
+                    </label>
+                    <label for="frequency">
+                        <input 
+                            type="radio" 
+                            value="3-4-times-perwk"
+                            name="frequency" 
+                            id="5" 
+                            class="inline" 
+                            required
+                        /> 3-4 times a week
+                    </label>
+                    <label for="frequency">
+                        <input 
+                        type="radio" 
+                        value="daily"
+                        name="frequency" 
+                        id="6" 
+                        class="inline" 
+                        required
+                    /> Daily
+                    </label>
+                
+            </fieldset>
+            <fieldset class="form-group">
+                <p> What time of day do you normally come to the gym? </p>
+                    <label for="time">
+                        <input 
+                            type="radio" 
+                            value="early-morning"
+                            name="time" 
+                            id="1" 
+                            class="inline" 
+                            required
+                        /> Early morning
+                    </label>
+                    <label for="time">
+                        <input 
+                            type="radio" 
+                            value="mid-morning"
+                            name="time" 
+                            id="2" 
+                            class="inline" 
+                            required
+                        /> Mid-morning
+                    </label>
+                    <label for="time">
+                        <input 
+                            type="radio" 
+                            value="during-lunch"
+                            name="time" 
+                            id="3" 
+                            class="inline" 
+                            required
+                        /> During the lunch hour
+                    </label>
+                    <label for="time">
+                        <input 
+                            type="radio"
+                            value="afternoon" 
+                            name="time" 
+                            id="4" 
+                            class="inline" 
+                            required
+                        /> Afternoon
+                    </label>
+                    <label for="time">
+                        <input 
+                            type="radio" 
+                            value="early-evening"
+                            name="time" 
+                            id="5" 
+                            class="inline" 
+                            required
+                        /> Early evening
+                    </label>
+                    <label for="time">
+                        <input 
+                            type="radio" 
+                            value="late-evening"
+                            name="time" 
+                            id="6" 
+                            class="inline" 
+                            required
+                        /> Late evening
+                    </label>
+               
+            </fieldset>
+            <fieldset class="form-group">
+                <p> When you do workout, what your objective / goal while doing so? (Check all that apply)</p>
+                    <label for="purposes">
+                        <input 
+                            type="checkbox" 
+                            id="purposes"
+                            value="build-muscle" 
+                            name="muscle" 
+                            class="inline"
+                        /> To build muscle
+                    </label>
+                    <label for="purposes">
+                        <input 
+                            type="checkbox" 
+                            id="purposes" 
+                            value="gain-weight"
+                            name="gain-weight" 
+                            class="inline"
+                        /> To gain weight
+                    </label>
+                    <label for="purposes">
+                        <input 
+                            type="checkbox" 
+                            id="purposes" 
+                            value="get-toned"
+                            name="toned" 
+                            class="inline"
+                        /> To get "toned"
+                    </label>
+                    <label for="purposes">
+                        <input 
+                            type="checkbox" 
+                            id="purposes" 
+                            value="performance"
+                            name="performance" 
+                            class="inline"
+                        /> To improve performance
+                    </label>
+                    <label for="purposes">
+                        <input 
+                            type="checkbox" 
+                            id="purposes" 
+                            value="healthier"
+                            name="healthier" 
+                            class="inline"
+                        /> To be healthier
+                    </label>
+                    <label for="purposes">
+                        <input 
+                            type="checkbox" 
+                            id="purposes" 
+                            value="train-for-event"
+                            name="event" 
+                            class="inline"
+                        /> To train for an event
+                    </label>
+                    <label for="purposes">
+                        <input 
+                            type="checkbox" 
+                            id="purposes"
+                            value="lose-fat" 
+                            name="lose-fat" 
+                            class="inline"
+                        /> To lose fat
+                    </label>
+                    <label for="purposes">
+                        <input 
+                            type="checkbox" 
+                            id="purposes" 
+                            value="lose-weight"
+                            name="lose-weight" 
+                            class="inline"
+                        /> To lose weight
+                    </label>
+                    <label for="purposes">
+                        <input 
+                        type="checkbox" 
+                        id="purposes"
+                        value="increase-strength" 
+                        name="strength" 
+                        class="inline"
+                    /> To increase strength
+                    </label>
+                    <label for="purposes">
+                        <input 
+                            type="checkbox" 
+                            id="purposes"
+                            value="get-in-shape" 
+                            name="shape" 
+                            class="inline"
+                        /> To get “in shape”
+                    </label>
+                    <label for="purposes">
+                        <input 
+                            type="checkbox" 
+                            id="purposes" 
+                            value="kill-time"
+                            name="kill-time" 
+                            class="inline"
+                        /> To kill time
+                    </label>
+                    <label for="purposes">
+                        <input 
+                            type="checkbox" 
+                            id="purposes"
+                            value="master-skill" 
+                            name="master" 
+                            class="inline"
+                        /> To master a sport/skill
+                    </label>
+                    <label for="purposes">
+                        <input 
+                        type="checkbox" 
+                        id="purposes" 
+                        value="other"
+                        name="other" 
+                        class="inline"
+                    /> Other
+                    </label>
+                
+            </fieldset>
+            <fieldset class="form-group">
+                <label id="number-label"> How would you rate us on a scale 1-10?
+                    <input 
+                        type="number" 
+                        id="number" 
+                        name="rate-scale" 
+                        min="1" 
+                        max="10" 
+                        placeholder="Enter your number"
+                    />
+                </label>
+            </fieldset>
+            <fieldset class="form-group">
+                <label class="recommend"> How likely is it that you would recommend us to a friend or a colleague? 
+                    <label for="recommendation"> 
+                        <input 
+                            type="radio" 
+                            value="definitely"
+                            name="recommendation" 
+                            id="0" 
+                            class="inline" 
+                            required
+                        /> Definitely
+                    </label>
+                    <label> 
+                        <input 
+                            type="radio" 
+                            value="maybe"
+                            name="recommendation" 
+                            id="1" 
+                            class="inline" 
+                            required
+                        /> Maybe
+                    </label>
+                    <label> 
+                        <input 
+                            type="radio" 
+                            name="recommendation" 
+                            id="2" 
+                            value="not-sure"
+                            class="inline" 
+                            required
+                        /> Not sure
+                    </label> 
+               
+            </fieldset>
+            <button 
+                type="submit"
+                id="submit" 
+                value="Submit" 
+                class="submit-button"
+                >
+            Submit
+            </button>
+        </form>
+    </body>
+</html>
